@@ -1,0 +1,125 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background:linear-gradient(to bottom, #F7D600, #e6cd6b, #BDC3C7);  
+    z-index: 999;
+    padding: 0;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between; /* Espaço entre o título e o menu */
+    align-items: center; /* Alinha ambos na vertical */
+    padding: 12px;
+    background:linear-gradient(to bottom, #F7D600, #e6cd6b, #BDC3C7); ;
+    width: 100%;
+}
+
+.cabecalho h1 {
+    text-align:start; /* Centraliza o título */
+    font-size: 52px;
+   
+    color: #e3ddb3;
+    flex: 1; /* O título ocupa o espaço restante */
+    text-shadow: 2px 2px 4px rgba(148, 133, 133, 0.5), /* sombra lateral */
+    -2px -2px 4px rgba(148, 133, 133, 0.5), /* sombra lateral */
+    2px -2px 4px rgba(148, 133, 133, 0.5), /* sombra lateral */
+    -2px 2px 4px rgba(148, 133, 133, 0.5); /* sombra lateral */
+}
+
+.cabecalho nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+    align-items: center;
+    min-width: 250px; /* Garante que o menu tenha largura suficiente para ficar à direita */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Deixa os itens da lista lado a lado */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Espaço entre os links */
+}
+
+.cabecalho nav a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color:rgb(148, 133, 133 );/* Cor dos links */
+    font-size: large;
+    padding: 8px 12px; /* Adiciona espaçamento interno */
+    border-radius: 4px; /* Opcional: deixa os links com bordas arredondadas */
+}
+
+.cabecalho nav a:hover {
+    background-color: #e3ddb3; /* Cor ao passar o mouse */
+}
+
+.navbar .nav-link.active {
+    background-color: #e3ddb3;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.container {
+    align-items: center;
+    max-width: 1250px;
+    width: 100%;
+}
+
+#carousel-exemplo {
+    padding: 1%;
+    border: 5px;
+    border-color: black;
+}
+.carousel-item img {
+    height: 80vh; /* 50% da altura da viewport */
+    
+}
+
+/* Contêiner da grade */
+.grid-container {
+    display: grid;
+    gap: 16px; /* Espaço entre os itens */
+    padding: 16px;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas (desktop por padrão) */
+}
+
+/* Estilo do card */
+.card {
+    background-color: #f1c40f; /* Amarelo */
+    color: #1d1d1d;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) { /* Tablets */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+    }
+}
